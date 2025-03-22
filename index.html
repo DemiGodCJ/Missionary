@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God’s Provision: A Journey of Faith and Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FAEBD7;
+            color: #4E4B3B;
+            transition: background-color 0.3s ease-in-out;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #C2B280;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-link {
+            color: #FFF !important;
+            font-size: 1.1rem;
+            padding: 15px 20px;
+            transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.2s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link:active {
+            background-color: #A88C57;
+            border-radius: 5px;
+            color: #4E4B3B;
+            transform: scale(1.08);
+        }
+.nav-item{
+    padding: 0 1.5rem;
+}
+        .navbar-toggler {
+            border: none;
+            background-color: #FFF;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        /* Content */
+        .content {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+
+        /* Sections */
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #FFF;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+        }
+
+        .section h2 {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #4E4B3B;
+        }
+
+        .section-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            gap: 30px;
+        }
+
+        /* Text Section */
+        .text-section {
+            max-width: 60%;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #4E4B3B;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .text-section p {
+            margin-bottom: 20px;
+        }
+
+        /* Image Section */
+        .image-section {
+            flex-shrink: 0;
+            width: 35%;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            height: 300px;
+            background: url('banner.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0088ff;
+            font-size: 2.5em;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            padding: 20px;
+            transition: background-color 1s ease-in-out;
+        }
+
+        /* Q&A Section */
+        .qna-section {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .qna-item {
+            margin-bottom: 15px;
+        }
+
+        .qna-toggle-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #C2B280;
+            color: #FFF;
+            font-size: 1.2rem;
+            text-align: left;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .qna-toggle-btn:hover {
+            background-color: #A88C57;
+        }
+
+        .qna-answer {
+            display: none;
+            padding: 15px;
+            background-color: #FAEBD7;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #4E4B3B;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .qna-item.active .qna-answer {
+            display: block;
+            max-height: 500px;
+            padding: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #C2B280;
+            text-align: center;
+            padding: 30px 20px;
+            color: #FFF;
+            font-size: 1rem;
+            position: relative;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .text-section {
+                max-width: 100%;
+                font-size: 1rem;
+                padding: 0 !important;
+            }
+
+            .image-section {
+                max-width: 70% !important;
+            }
+
+            .image-section img {
+                width: 100%;
+                max-height: 250px;
+                object-fit: cover;
+            }
+        }
+
+        #identity {
+            background-color: #FFF;
+            padding: 40px 20px;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+        }
+
+        #identity .section-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            gap: 30px;
+        }
+
+        #identity .text-section {
+            max-width: 60%;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #4E4B3B;
+        }
+
+        #identity .image-section {
+            flex-shrink: 0;
+            width: 35%;
+        }
+
+        #identity .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            #identity .section-content {
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+            }
+
+            #identity .text-section {
+                max-width: 100%;
+                font-size: 1rem;
+            }
+
+            #identity .image-section {
+                max-width: 70% !important;
+            }
+
+            #identity .image-section img {
+                width: 100%;
+                max-height: 250px;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#identity">Identity</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimony">Testimony</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vision">Vision</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#audience">Target Audience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#inspiration">Inspiration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="banner">
+        God’s Provision: A Journey of Faith and Service
+    </div>
+    <div class="content">
+        <section id="identity" class="section">
+            <h2>My Identity</h2>
+            <div class="section-content">
+                <div class="text-section" style="padding-right: 5rem;">
+                    <p>My name is Charles Joshua Chakma, and I was born and raised in Chandraghona, Chittagong,
+                        Bangladesh. Growing up in a Christian family in a predominantly Muslim country, I faced many
+                        challenges. In Bangladesh, Christianity makes up only about 0.4% of the population, and as a
+                        child, mixed up with different faiths in education institutions and neighborhood. Despite these
+                        challenges, my family's dedication to ministry has greatly influenced my faith and inspired me
+                        to deepen my relationship with Christ. Growing up with a father who is a pastor and a mother who
+                        is a devoted woman leader has played an important role in shaping the person I am today.</p>
+                </div>
+                <div class="image-section">
+                    <img src="CJ.jpg" alt="My Identity" style="max-width: 80%;">
+                </div>
+            </div>
+        </section>
+        <section id="testimony" class="section">
+            <h2>My Testimony: How I Accepted Christ</h2>
+            <div class="section-content">
+                <div class="image-section">
+                    <img src="Baptism_CJ.jpg" alt="My Testimony" style="max-width: 120%;">
+                </div>
+                <div class="text-section text-left" style="padding-left: 5rem;">
+                    <p>From a young age, I followed Christian traditions faithfully, and my parents were perfect role
+                        models. However, as I grew older and encountered people from different backgrounds, I slowly
+                        drifted away from the Lord. My devotion became more about routine and pride, wanting to impress
+                        others with my biblical knowledge, rather than a genuine relationship with Christ. I was deeply
+                        proud of my faith and saw it as something that made me better than others. But the true
+                        transformation came when God opened my eyes to the reality that my relationship with Him was
+                        missing the depth of love and humility. It was in that moment that I truly understood the
+                        gospel, and my heart broke as I realized I had been living for myself instead of for God. I
+                        repented and surrendered my life to Him, seeking not only His forgiveness but also His guidance
+                        in becoming a faithful follower. I accepted Jesus as my Lord and Savior and was baptized in 2020
+                        at the age of 20. My journey of faith continues, and I strive to grow in humility, desiring a
+                        deeper relationship with God and to live according to His will.</p>
+                </div>
+            </div>
+        </section>
+        <section id="vision" class="section">
+            <h2>My Vision for The Kingdom</h2>
+            <div class="text-section">
+                <p>My vision is to become a passionate servant of Christ, growing in both my knowledge and character. I
+                    desire to be a leader who leads others by example, pointing people to Christ through my actions and
+                    words. I want to be someone who loves deeply, listens with compassion, and shares the gospel with
+                    humility. Through continued growth in both knowledge and character, I aim to guide others to a
+                    deeper understanding of God’s message and their purpose in His Kingdom. I believe that by living
+                    with grace and unwavering faith, I can help others experience the transformative power of God’s
+                    love, just as I have. My heart’s desire is to equip others to walk in the fullness of their faith,
+                    whether they are new to Christianity or have been walking with the Lord for many years. I long to
+                    see a world where people are not just aware of Christ but truly know Him—living in relationship with
+                    Him and fully embracing the purpose He has for them.
+                </p>
+            </div>
+        </section>
+        <section id="audience" class="section">
+            <h2>Target Audience</h2>
+            <div class="text-section">
+                <p>In Bangladesh, Muslims constitute about 91% of the population, and Christianity remains a minority
+                    faith. Unfortunately, misconceptions about Jesus and Christianity are widespread among the Muslim
+                    population. Many of my Muslim friends and neighbors have misconceptions about who Jesus is, and
+                    often, they are taught a distorted version of His identity. These misconceptions, along with
+                    stereotypes and misunderstandings, make it challenging to have open conversations about faith. But I
+                    see a significant opportunity to bridge these gaps and reach out to those who have not yet
+                    encountered the truth. I am deeply burdened for the Muslim people of Bangladesh and feel a strong
+                    calling to engage with them in love and humility. Through sharing the message of Jesus, I hope to
+                    address these misconceptions and promote a more accurate understanding of Christianity. I believe
+                    that by breaking down barriers of misunderstanding and showing them the truth of who Jesus really
+                    is, I can help lead them to faith in Him. As it is written in Matthew 28:19-20, “Go therefore and
+                    make disciples of all nations... teaching them to observe all that I have commanded you,” I believe
+                    it is my responsibility to reach out to those who have not yet heard the truth, particularly those
+                    in my community who have never had the opportunity to understand who Jesus is.</p>
+            </div>
+        </section>
+        <section id="inspiration" class="section">
+            <h2>My Inspiration to Work with God</h2>
+            <div class="text-section">
+                <p>I have always felt a deep calling to serve God, and my heart has been drawn to His Word. I’ve
+                    experienced firsthand the transformative power of His love in my life. From a young age, I’ve had a
+                    strong desire to share the truth of the Bible, particularly with those in my community who may have
+                    misconceptions about who Jesus is. I believe God’s message is life-changing, and my passion is to be
+                    an instrument of His love and truth.
+                    My inspiration comes from witnessing the transformation in my parents after they completed their
+                    theology program at IGSL. Their journey not only deepened their knowledge but also shaped their
+                    character, and I long to experience that same growth. For me, working for God is not just about
+                    preaching but about living a life that reflects His love, engaging with others in a way that brings
+                    hope, healing, and understanding.
+                    I aspire to be a spiritual leader who listens with empathy, speaks with wisdom, and offers counsel
+                    that leads to lasting transformation. My calling is rooted in a deep sense of responsibility and
+                    gratitude. I want to serve God with all my heart, knowing that my efforts contribute to fulfilling
+                    His purpose and helping others find the hope and peace only He can provide.
+                    Ultimately, it’s not about seeking my own glory but being faithful to the calling God has placed on
+                    my life. I believe He has called me to be worthy of His purpose, to carry His light, and to lead
+                    others across the bridge to life in Him.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="qna-section">
+                <div class="qna-item">
+                    <button class="qna-toggle-btn">Why IGSL (Philippines) - The Master of Divinity?</button>
+                    <div class="qna-answer">
+                        <p>I have chosen IGSL (International Graduate School of Leadership) in the Philippines for my
+                            Master of Divinity because it aligns perfectly with my calling and vision. IGSL is not just
+                            an institution—it is a training ground for leaders who are deeply rooted in biblical truth
+                            and passionate about transforming lives.
+                            <br>One of the primary reasons I am drawn to IGSL is the profound impact it had on my
+                            parents. Their time at IGSL deepened their theological understanding, refined their
+                            spiritual leadership, and equipped them to serve with wisdom and humility. Seeing their
+                            transformation solidified my conviction that IGSL is the right place for me to grow in both
+                            knowledge and character.
+                            At IGSL, I know that I will receive:
+                            <br>• A strong theological foundation to preach and teach with clarity and conviction.
+                            <br>• Spiritual formation that nurtures my heart and character for long-term ministry.
+                            <br>• Practical leadership training to engage in real-world evangelism and discipleship.
+                            <br>• Cross-cultural exposure that will help me effectively minister in Bangladesh’s diverse
+                            religious landscape.
+                            <br>This journey is not just about academic learning—it is about being equipped for a
+                            lifetime of impactful ministry. I am excited about the opportunity to learn, grow, and
+                            prepare for the unique calling God has placed on my life. My heart’s desire is to be a
+                            faithful servant, fully prepared to share the gospel and disciple others for the glory of
+                            God.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="qna-item">
+                    <button class="qna-toggle-btn">How can you support my vision for Lord's Kingdom?(Prayer for
+                        needs)</button>
+                    <div class="qna-answer">
+                        <p>This journey to IGSL is a step of faith, marking the beginning of growth, transformation, and
+                            service. The knowledge I gain will not only shape my life but also equip me to serve others
+                            effectively. It is my passion to be a messenger of God’s love and wisdom, and I trust this
+                            experience will help me fulfil that calling.
+                            <br>I am called to share the truth of Jesus with the Muslim population in Bangladesh, where
+                            He is often misunderstood and misrepresented. Through this mission, I aim to break down
+                            misconceptions and help others understand who Jesus truly is.
+                            As I prepare for this journey, I face challenges. The costs for pursuing my Master of
+                            Divinity at IGSL in the Philippines include:
+                            <br>• Airfare (one-way): 60,000 BDT (500 USD)
+                            <br>• Visa Process: 10,000 BDT (100 USD)
+                            <br>• Food and Accommodation: 300 USD/month
+                            <br>As I face these challenges, there are moments when I feel the weight of responsibility,
+                            and the temptation to find a job to support my family grows stronger. Yet, in these times of
+                            uncertainty, I am reminded of God's faithfulness. Philippians 4:19 reassures me, "And my God
+                            will supply every need of yours according to His riches in glory in Christ Jesus." I hold on
+                            to the promise in Matthew 6:33, "But seek first His kingdom and His righteousness, and all
+                            these things will be given to you as well."
+                            I humbly ask for your prayers and support. Your encouragement is more than a financial
+                            gift—it’s a partnership in helping me grow and serve others for God’s glory. May the Lord
+                            bless you abundantly for your kindness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="text-section">
+                <p>I would love to stay connected with you on this journey. Please feel free to reach out to me through
+                    the following contacts:
+                    <br>- Email: <a href="mailto:cjcrohan@gmail.com">cjcrohan@gmail.com</a>
+                    <br>- Phone (with WhatsApp): +8801841305813
+                    <br>- Instagram: <a href="https://www.instagram.com/just_a_blessed_guy/">[Instagram link]</a>
+                    <br>- Facebook: <a href="https://www.facebook.com/Just.A.Blessed.Guy/">[Facebook link]</a>
+                    <br>Thank you for your prayers and support as I take this step towards fulfilling God’s calling in
+                    my life.
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Charles Joshua Chakma. All rights reserved.</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        const buttons = document.querySelectorAll('.qna-toggle-btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                const qnaItem = button.parentElement;
+                qnaItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
