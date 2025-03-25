@@ -162,41 +162,21 @@
             margin-bottom: 15px;
         }
 
-        .qna-toggle-btn {
-            width: 100%;
-            padding: 15px;
-            background-color: #C2B280;
-            color: #FFF;
-            font-size: 1.2rem;
-            text-align: left;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .qna-toggle-btn:hover {
-            background-color: #A88C57;
+        .qna-item h5 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
         }
 
         .qna-answer {
-            display: none;
             padding: 15px;
             background-color: #FAEBD7;
             border-radius: 10px;
             margin-top: 10px;
             font-size: 1rem;
             color: #4E4B3B;
-            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-            max-height: 0;
-            overflow: hidden;
         }
 
-        .qna-item.active .qna-answer {
-            display: block;
-            max-height: 500px;
-            padding: 15px;
-        }
 
         /* Footer */
         .footer {
@@ -371,13 +351,15 @@
                     I want to be someone who loves deeply, listens with compassion, and shares the gospel with humility.
                     Through continual growth in both knowledge and character, I aim to guide others to a deeper
                     understanding of God’s message and their purpose in His Kingdom.
-                    <br>As I live in a modern age, I also dream of using my technical skills to connect with people through
+                    <br>As I live in a modern age, I also dream of using my technical skills to connect with people
+                    through
                     social media and online platforms. Since many in Bangladesh primarily understand Bangla, I want to
                     create a social media platform that provides easy Bangla translations. My future goal is to build a
                     dedicated team that will work alongside me to translate foreign-language sermons, lectures, and
                     gospel messages into Bangla, ensuring that everyone can access and understand the truth of God’s
                     Word in their heart language.
-                    <br>This platform will serve as a lifeline for those who do not have a church nearby or cannot attend
+                    <br>This platform will serve as a lifeline for those who do not have a church nearby or cannot
+                    attend
                     one for various reasons. Additionally, many Muslims converts in Bangladesh face persecution and
                     cannot openly proclaim their faith in Christ without severe consequences. For them, this platform
                     will provide a safe space where they can attend an online church, receive spiritual nourishment, and
@@ -435,31 +417,10 @@
         <section class="section">
             <div class="qna-section">
                 <div class="qna-item">
-                    <!-- Trigger Button for Modal -->
-                    <button class="qna-toggle-btn btn btn-primary" data-bs-toggle="modal" data-bs-target="#qnaModal1">
-                        Why IGSL (Philippines) - The Master of Divinity?
-                    </button>
-                </div>
-
-                <div class="qna-item">
-                    <!-- Trigger Button for Modal -->
-                    <button class="qna-toggle-btn btn btn-primary" data-bs-toggle="modal" data-bs-target="#qnaModal2">
-                        How can you support my vision for Lord's Kingdom?(Prayer for needs)
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Modal 1 -->
-        <div class="modal fade" id="qnaModal1" tabindex="-1" aria-labelledby="qnaModalLabel1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="qnaModalLabel1">Why IGSL (Philippines) - The Master of Divinity?
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
+                    <!-- Question -->
+                    <h5>Why IGSL (Philippines) - The Master of Divinity?</h5>
+                    <!-- Answer -->
+                    <div class="qna-answer">
                         <p>I have chosen IGSL (International Graduate School of Leadership) in the Philippines for my
                             Master of Divinity because it aligns perfectly with my calling and vision. IGSL is not just
                             an institution—it is a training ground for leaders who are deeply rooted in biblical truth
@@ -483,19 +444,12 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Modal 2 -->
-        <div class="modal fade" id="qnaModal2" tabindex="-1" aria-labelledby="qnaModalLabel2" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="qnaModalLabel2">How can you support my vision for Lord's
-                            Kingdom?(Prayer for needs)</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
+                <div class="qna-item">
+                    <!-- Question -->
+                    <h5>How can you support my vision for Lord's Kingdom? (Prayer for needs)</h5>
+                    <!-- Answer -->
+                    <div class="qna-answer">
                         <p>This journey to IGSL is a step of faith, marking the beginning of growth, transformation, and
                             service. The knowledge I gain will not only shape my life but also equip me to serve others
                             effectively. It is my passion to be a messenger of God’s love and wisdom, and I trust this
@@ -505,45 +459,59 @@
                             misconceptions and help others understand who Jesus truly is.
                             As I prepare for this journey, I face challenges. The costs for pursuing my Master of
                             Divinity at IGSL in the Philippines include:
-                            <br>• Airfare (one-way): 60,000 BDT (500 USD)
-                            <br>• Visa Process: 10,000 BDT (100 USD)
-                            <br>• Food and Accommodation: 300 USD/month
-                            <br>As I face these challenges, there are moments when I feel the weight of responsibility,
-                            and the temptation to find a job to support my family grows stronger. Yet, in these times of
-                            uncertainty, I am reminded of God's faithfulness. Philippians 4:19 reassures me, "And my God
-                            will supply every need of yours according to His riches in glory in Christ Jesus." I hold on
-                            to the promise in Matthew 6:33, "But seek first His kingdom and His righteousness, and all
-                            these things will be given to you as well."
-                            I humbly ask for your prayers and support. Your encouragement is more than a financial
-                            gift—it’s a partnership in helping me grow and serve others for God’s glory. May the Lord
-                            bless you abundantly for your kindness.
+                            <strong>
+                                <br>• Airfare (one-way): 60,000 BDT (500 USD)
+                                <br>• Visa Process: 10,000 BDT (100 USD)
+                                <br>• Food and Accommodation: 300 USD/month
+                            </strong>
+                            <br>IGSL is providing me with a scholarship that covers my tuition and library fees. However, I still need to raise funds for my food, accommodation, airfare, and visa fees. As I navigate these challenges, there are moments when I feel the weight of responsibility, and the temptation to seek a job to support my family grows stronger. Yet, in these times of uncertainty, I am reminded of God’s faithfulness.
+
+                            <br>Philippians 4:19 reassures me: "And my God will supply every need of yours according to His riches in glory in Christ Jesus." I also hold on to the promise in Matthew 6:33: "But seek first His kingdom and His righteousness, and all these things will be given to you as well."
+                            
+                            <br>I humbly ask for your prayers and support. Your encouragement is more than just financial assistance—it is a partnership in helping me grow and serve others for God’s glory. May the Lord bless you abundantly for your kindness.
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <div class="text-section">
-            <p>I would love to stay connected with you on this journey. Please feel free to reach out to me through
-                the following contacts:
-                <br>- Email: <a href="mailto:cjcrohan@gmail.com">cjcrohan@gmail.com</a>
-                <br>- Phone (with WhatsApp): +8801841305813
-                <br>- Instagram: <a href="https://www.instagram.com/just_a_blessed_guy/">[Instagram link]</a>
-                <br>- Facebook: <a href="https://www.facebook.com/Just.A.Blessed.Guy/">[Facebook link]</a>
-                <br>Thank you for your prayers and support as I take this step towards fulfilling God’s calling in
-                my life.
-            </p>
-        </div>
-    </section>
-    <div class="footer">
-        <p>&copy; 2025 Charles Joshua Chakma. All rights reserved.</p>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+        <section id="contact" class="section">
+            <h2>Bank Details</h2>
+            <div class="text-section">
+                <p>
+                    <br><strong>Account Holder Name</strong>: Charles Joshua Chakma
+                    <br><strong>Account Number</strong>: 4882101061212
+                    <br><strong>SWIFT Code</strong> : PUBABDDH
+                    <br> <strong>Bank Name</strong>: Pubali Bank PLC
+                    <br><strong>Bank Branch Address</strong>: ALHAJ LATIF TOWER HOLDING NO. 0280 VILL - SAJALPUR, P.O. - BIRGONJ, P.S. - BIRGONJ DISTRICT - DINAJPUR, RANGPUR ZONE, DINAJPUR
+                    <br><strong>Branch Code</strong> :  4882
+                    <br><strong>Routing Number</strong> : 175280371
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="text-section">
+                <p>I would love to stay connected with you on this journey. Please feel free to reach out to me through
+                    the following contacts:
+                    <br>- Email: <a href="mailto:cjcrohan@gmail.com">cjcrohan@gmail.com</a>
+                    <br>- Phone (with WhatsApp): +8801841305813
+                    <br>- Instagram: <a href="https://www.instagram.com/just_a_blessed_guy/">[Instagram link]</a>
+                    <br>- Facebook: <a href="https://www.facebook.com/Just.A.Blessed.Guy/">[Facebook link]</a>
+                    <br>Thank you for your prayers and support as I take this step towards fulfilling God’s calling in
+                    my life.
+                </p>
+            </div>
+        </section>
+
+        <div class="footer">
+            <p>&copy; 2025 Charles Joshua Chakma. All rights reserved.</p>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
